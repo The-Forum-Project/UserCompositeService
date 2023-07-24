@@ -1,7 +1,6 @@
 package com.example.usercompositeservice.controller;
 
 import com.example.usercompositeservice.dto.GeneralResponse;
-import com.example.usercompositeservice.dto.MessageResponse;
 import com.example.usercompositeservice.exception.InvalidAuthorityException;
 import com.example.usercompositeservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
