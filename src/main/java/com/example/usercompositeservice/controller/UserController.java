@@ -24,11 +24,11 @@ public class UserController {
 
     @PatchMapping("/{userId}")
     public ResponseEntity<GeneralResponse> modifyUser(@PathVariable Long userId,
-                                                      @RequestParam(value = "firstName") String firstName,
-                                                      @RequestParam(value = "lastName") String lastName,
-                                                      @RequestParam(value = "email") String email,
-                                                      @RequestParam(value = "password") String password,
-                                                      @RequestParam(value = "profileImage") MultipartFile profileImage) throws InvalidAuthorityException {
+                                                      @RequestParam(value = "firstName", required = false) String firstName,
+                                                      @RequestParam(value = "lastName", required = false) String lastName,
+                                                      @RequestParam(value = "email", required = false) String email,
+                                                      @RequestParam(value = "password", required = false) String password,
+                                                      @RequestParam(value = "profileImage", required = false) MultipartFile profileImage) throws InvalidAuthorityException {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         List<GrantedAuthority> authorities = (List<GrantedAuthority>) authentication.getAuthorities();
